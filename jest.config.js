@@ -1,20 +1,5 @@
-const { resolve } = require('path');
-const root = resolve(__dirname);
+/** @type {import('ts-jest/dist/types').InitialOptionsTsJest} */
 module.exports = {
-  rootDir: root,
-  displayName: "root-tests",
-  testMatch: ["<rootDir>/src/**/*.test.ts"],
-  testEnvironment: "node",
-  clearMocks: true,
-  transform: {
-    "^.+\\.(ts|tsx)$": "ts-jest"
-  },
-  globals: {
-    "ts-jest": {
-      tsConfig: "tsconfig.json"
-    }
-  },
-  moduleNameMapper: {
-    "@/(.*)": "<rootDir>/src/$1",
-  },
-}
+  preset: 'ts-jest',
+  testEnvironment: 'node',
+};
