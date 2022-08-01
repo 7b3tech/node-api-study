@@ -3,14 +3,7 @@ import { router } from './route/postsRoute'
 
 const app = express();
 
-// app.get('/', async (req, res) => {
-//   res.json([{
-//     id: 1,
-//     title: "This is a title"
-//   }])
-
-// })
-
+app.use(express.json());
 app.use('/', router);
 
 app.listen(3000, () => {
