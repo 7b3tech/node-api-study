@@ -1,11 +1,11 @@
-import { Pool } from 'pg';
+import pgPromise from 'pg-promise';
 
-const pool = new Pool({
+const pgp = pgPromise({/* Initialization Options */ });
+
+export const db = pgp({
   user: 'postgres',
   password: 'docker',
   host: 'localhost',
   port: 5432,
-  database: 'blog',
+  database: 'blog'
 });
-
-export { pool as database } 
